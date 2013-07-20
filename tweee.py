@@ -5,13 +5,15 @@ from tweepy.streaming import StreamListener, Stream
 from tweepy.auth import OAuthHandler
 from app.model import Tweet
 from mongoengine import *
+
+import secret
  
  
 def getOauth():
-    consumerKey = 'consumerkey'
-    consumerSecret = 'consumer secret'
-    accessKey = 'access key'
-    accessSecret = 'access secret'
+    CONSUMER_KEY=secret.CONSUMER_KEY
+    CONSUMER_SECRET=secret.CONSUMER_SECRET
+    ACCESS_TOKEN_KEY=secret.ACCESS_TOKEN_KEY
+    ACCESS_TOKEN_SECRET=secret.ACCESS_TOKEN_SECRET
  
     auth = OAuthHandler(consumerKey, consumerSecret)
     auth.set_access_token(accessKey, accessSecret)
