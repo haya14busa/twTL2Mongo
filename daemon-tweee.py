@@ -12,7 +12,6 @@ import urllib
 import logging
 
 # python-daemon
-import os
 import os.path
 import daemon
 
@@ -90,4 +89,5 @@ if __name__ == '__main__':
     # stream.filter(track='python')
     stream = UserStream(auth, AbstructListener(), secure=True)
     stream.timeout = None
-    stream.user_stream()
+    with context:
+        stream.user_stream()
