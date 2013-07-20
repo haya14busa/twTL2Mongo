@@ -15,8 +15,8 @@ def getOauth():
     ACCESS_TOKEN_KEY=secret.ACCESS_TOKEN_KEY
     ACCESS_TOKEN_SECRET=secret.ACCESS_TOKEN_SECRET
  
-    auth = OAuthHandler(consumerKey, consumerSecret)
-    auth.set_access_token(accessKey, accessSecret)
+    auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
     return auth
  
  
