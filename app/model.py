@@ -12,7 +12,10 @@ class Tweet(Document):
     icon_path = StringField()
     cached_icon_path = StringField()
     created_at = DateTimeField()
- 
+    source = StringField()
+    id_str = StringField()
+    in_reply_to_status_id_str = StringField()
+
  
 class DBI(object):
     def __init__(self):
